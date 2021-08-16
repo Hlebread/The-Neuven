@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Главная страница</title>
+	<link type="image/png" rel="shortcut icon" href="../images/favicon.png">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/style.css" type="text/css">
+	<link rel="stylesheet" href="./styles/home.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="./scripts/script.js" type="text/javascript"></script>
+</head>
+<body>
+	<a id='upbutton'><span></span></a>
+	<div class='preloader'>
+		<img src='./images/world.svg'  title="Preloader" alt="Preloader">
+	</div>
+
+	<header>
+		<div class="burger" title="Меню"> <span></span></div>
+		<img src="./images/logo.svg" alt="The Neuven" title="The Neuven">
+		<nav>
+			<ul>
+				<li class="active"><a href="index.html" title="Гланая">главная</a></li>
+				<li><a href="./pages/tours.html" title="Туры">услуги</a></li>
+				<li><a href="./pages/blog.html" title="Блог">блог</a></li>
+				<li><a href="./pages/about.html" title="О нас">о нас</a></li>
+				<li><a href="./pages/contactUs.html" title="Контакты">контакты</a></li>
+			</ul>
+		</nav>
+		<div>
+			<a href="./pages/logIn.html" title="Вход/Регистрация"><svg class="icon" ><use  xlink:href="./images/sprite.svg#user" ></svg></a>
+		</div>
+	</header>
+
+	<main>
+		<section id="parallax" >
+			<h1 class="scroll text" data-rate='2'>The Neuven</h1>
+			<div class="scroll land"  data-rate='-.2'></div>
+			<script>
+				window.addEventListener('scroll', function(e) {
+					const TARGET = document.querySelectorAll('.scroll');
+					
+					let scrolled = window.pageYOffset;
+		
+					let index = 0, length = TARGET.length;
+					for(index; index < length; index++){
+						let pos = window.pageYOffset * TARGET[index].dataset.rate;
+						
+						TARGET[index].style.transform = 'translate3d(0px,'+pos+'px, 0px)';
+					}			
+				});
+			</script>
+		</section>
+		<section id="tours">
+			<div>
+				<a href="./pages/tours.html" title="Воздухоплавание"><figure><img src="./images/index/baloons.jpg" alt="Воздушные шары" title="Воздушные шары"><figcaption>Небо</figcaption></figure></a>
+				<a href="./pages/tours.html" title="Горный туризм"><figure><img src="./images/index/mountain.jpg" alt="Пейзаж гор" title="Пейзаж гор"><figcaption>Горы</figcaption></figure></a>
+				<a href="./pages/tours.html" title="Погреться на пляже"><figure><img src="./images/index/palm.jpg" alt="Пальмы на берегу" title="Пальмы на берегу"><figcaption>Море</figcaption></figure><br></a>
+			</div>
+			<a href="./pages/tours.html" title="Другие туры">Другие туры <span></span></a>
+		</section>
+		
+		<section id="radio">
+			<div class="picture">
+				<img src="./images/index/horizon.jpg" alt="Лагуна" title="Лагуна">
+			</div>
+			<div class="container">
+				<div>новые горизонты</div>
+				<input type="radio" name="folder" id="folder1" checked="" class="radio-folder">
+				<label for="folder1">о нас</label>
+				<div>The Neuven стремится предоставить нашим клиентам самые выгодные и качественные туристические услуги. Мы увлечены путешествиями и делимся с вами чудесами света.</div>
+				<input type="radio" name="folder" id="folder2" class="radio-folder">
+				<label for="folder2">почему мы?</label>
+				<div>Мы с гордостью предлагаем отличное качество и соотношение цены и качества в наших турах, которые дают вам возможность познакомиться с выбранным вами местом в аутентичной и захватывающей манере.</div>
+				<input type="radio" name="folder" id="folder3" class="radio-folder">
+				<label for="folder3">наша цель</label>
+				<div>Наша миссия - обеспечить максимально удобное планирование путешествий и одновременно стать универсальным поставщиком всех туристических услуг, доступных в отрасли.</div>
+				<a href="./pages/contactUs.html#getInTouch" title="Связаться с нами">Связаться</a>
+				<a href="./pages/about.html" title="О нас">Узнать больше</a>
+			</div>
+		</section>
+
+		<section id="services">
+			<h1>Наши услуги</h1>
+			<div class="container">
+				<div class="card">
+					<div class="imgBx">
+						<svg class="icon"><use xlink:href="./images/sprite.svg#settings" /></svg>
+					</div>
+					<div class="content">
+						<div>
+							<a href="./pages/about.html" title="Узнать больше"><h6>Персональный подбор</h6></a>
+							<p>Наша уникальная система подбора позволит вам найти именно тот тур, который вам нужен для вашего отпуска.</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<svg class="icon"><use xlink:href="./images/sprite.svg#medal" /></svg>
+					</div>
+					<div class="content">
+						<div>
+							<a href="./pages/about.html" title="Узнать больше"><h6>Широкий выбор</h6></a>
+							<p>Мы предлагаем широкий выбор индивидуально подобранных туров по всему миру.</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<svg class="icon"><use xlink:href="./images/sprite.svg#star" /></svg>
+					</div>
+					<div class="content">
+						<div>
+							<a href="./pages/about.html" title="Узнать больше"><h6>Cервис</h6></a>
+							<p>Наши менеджеры по туризму сделают все, чтобы предоставить вам лучший сервис.</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<svg class="icon"><use xlink:href="./images/sprite.svg#headphones" /></svg>
+					</div>
+					<div class="content">
+						<div>
+							<a href="./pages/about.html" title="Узнать больше"><h6>Поддержка 24/7</h6></a>
+							<p>Вы всегда можете получить профессиональную поддержку от наших сотрудников 24/7</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<svg class="icon"><use xlink:href="./images/sprite.svg#fire" /></svg>
+					</div>
+					<div class="content">
+						<div>
+							<a href="./pages/about.html" title="Узнать больше"><h6>Лучшие отели</h6></a>
+							<p>Наша команда предлагает своим клиентам только лучший выбор недорогих и роскошных отелей.</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<svg class="icon"><use xlink:href="./images/sprite.svg#wallet" /></svg>
+					</div>
+					<div class="content">
+						<div>
+							<a href="./pages/about.html" title="Узнать больше"><h6>Гарантия цены</h6></a>
+							<p>Если вы найдете туры дешевле наших, мы компенсируем разницу.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="hot">
+			<h1>горячие туры</h1>
+			<article>
+				<div class="container">
+					<div><img src="./images/services/hot1.jpg" alt="Бенидорм, Испания" title="Бенидорм, Испания"></div>			
+					<div class="content">
+						<a href="./pages/tours.html" title="Туры"><h2>Бенидорм, Испания</h2></a>
+						<div><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><a href="logIn.html" title="Читать отзывы">отзывы клиентов: 4</a></div>
+						<div>Бенидорм &mdash; оживленный курорт с большой репутацией среди любителей пляжного отдыха. Расположенный на солнечном побережье Коста Бланка, город является одним из первых испанских пляжных курортов ...</div>
+						<a href="./pages/logIn.html" title="Оформить заказ">заказать</a>
+					</div>
+				<aside>$1000</aside>
+				</div>
+			</article>
+			<article>
+				<div class="container">
+					<div><img src="./images/services/hot2.jpg" alt="Остров Маврикий, Африка" title="Остров Маврикий, Африка"></div>			
+					<div class="content">
+						<a href="./pages/tours.html" title="Туры"><h2>Остров Маврикий, Африка</h2></a>
+						<div><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><svg class="icon"><use xlink:href="./images/sprite.svg#star"></svg><a href="logIn.html" title="Читать отзывы">отзывы клиентов: 4</a></div>
+						<div>
+							Красивое и гостеприимное островное государство Маврикий &mdash; идеальный вариант для завершения вашего сафари. Насладитесь восхитительными ароматами...</div>
+						<a href="./pages/logIn.html" title="Оформить заказ">заказать</a>
+					</div>
+				<aside>$1000</aside>
+				</div>
+			</article>
+
+		</section>
+
+		<section id="team">
+			<h1>Разные люди &mdash; одна цель</h1><br>
+				<div class="container">
+					<div class="card">
+						<a href="./pages/about.html" title="Узнать больше"><img src="./images/index/team2.jpg" alt="Наша команда" title="Наша команда">
+						<span>Генрих Ягода</span></a>
+						<div class="details">
+							<span>Директор</span>
+							<a href="tel:+375291231122" title="Позвонить нам">+375 29 123 11 22</a>
+						</div>
+					</div>
+					<div class="card">
+						<a href="./pages/about.html" title="Узнать больше"><img src="./images/index/team3.jpg" alt="Наша команда" title="Наша команда">
+						<span>Полина Варнова</span></a>
+						<div class="details">
+							<span>Консультант</span>
+							<a href="tel:+375291231122" title="Позвонить нам">+375 29 123 11 22</a>
+						</div>
+					</div>
+					<div class="card">
+						<a href="./pages/about.html" title="Узнать больше"><img src="./images/index/team1.jpg" alt="Наша команда" title="Наша команда">
+						<span>Лаврентий Берия</span></a>
+						<div class="details">
+							<span>Тур-агент</span>
+							<a href="tel:+375291231122" title="Позвонить нам">+375 29 123 11 22</a>
+						</div>
+					</div>
+					<div class="card">
+						<a href="./pages/about.html" title="Узнать больше"><img src="./images/index/team4.jpg" alt="Наша команда" title="Наша команда">
+						<span>Алиса Молчанова</span></a>
+						<div class="details">
+							<span>PR-менеджер</span>
+							<a href="tel:+375291231122" title="Позвонить нам">+375 29 123 11 22</a>
+						</div>
+					</div>
+				</div>
+		</section>
+
+
+	</main>
+	
+	<footer>
+		<div class="container">
+			<div class="contact">
+					<h6>свяжитесь с нами:</h6>
+					<span><a href="tel:+375291231223" title="Позвонить нам"><svg class="icon"><use xlink:href="./images/sprite.svg#phone-call"></use></svg>+375-(29)-123-12-23</a></span>
+					<span><a href="mailto:info@test.com" title="Написать нам"><svg class="icon"><use xlink:href="./images/sprite.svg#email"></use></svg>info@test.com</a></span>
+					<span><a href="./pages/contactUs.html#map" title="Как нас найти"><svg class="icon"><use xlink:href="./images/sprite.svg#map-locator"></use></svg>Cело Кукуево, улица Барабашкина 13</a></span>
+			</div>
+			<div class="pop">
+				<h6>популярные новости:</h6>
+				<a href="./pages/blogPage_1.html" title="Статья">Вершины, которые нужно успеть покорить</a>
+				<span>Январь 25, 2021</span>
+				<a href="./pages/blogPage_1.html" title="Статья">10 вещей, которые нужно сделать на Кубе</a>
+				<span>Май 4, 2021</span>
+			</div>
+			<nav>
+				<h6>Быстрые ссылки:</h6>
+				<ul>
+					<li><a href="./index.html" class="active" title="Главная">главная</a></li>
+					<li><a href="./pages/about.html" title="О нас">о нас</a></li>
+					<li><a href="./pages/tours.html" title=" Туры">услуги</a></li>
+					<li><a href="./pages/blog.html" title="Блог">блог</a></li>
+					<li><a href="./pages/contactUs.html" title="Контакты">контакты</a></li>
+				</ul>
+				<a href="./pages/contactUs.html" title="Связаться с нами">Связаться</a>
+			</nav>
+		</div>
+		<div class="bottom">
+			<span>&copy; 2021 The Neuven. All Rights Reserved. Created by Hlebreadm</span>
+			<div>
+				<a href="https://twitter.com/?lang=ru" title="Тwitter"><svg class="icon"><use xlink:href="./images/sprite.svg#twitter"></use></svg></a>
+				<a href="https://www.facebook.com/" title="Facebook"><svg class="icon"><use xlink:href="./images/sprite.svg#facebook"></use></svg></a>
+				<a href="https://www.instagram.com/" title="Instagram"><svg class="icon"><use xlink:href="./images/sprite.svg#instagram"></use></svg></a>
+			</div>
+			<a href="./pages/404.html" title="Политика конфиденциальности">Privacy policy</a>
+		</div>
+	</footer>
+</body>
+</html>

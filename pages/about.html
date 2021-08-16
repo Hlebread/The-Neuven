@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>О нас</title>
+	<link type="image/png" rel="shortcut icon" href="../images/favicon.png">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/style.css" type="text/css">
+	<link rel="stylesheet" href="../styles/about.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="../scripts/script.js" type="text/javascript"></script>
+</head>
+<body>
+	<a id='upbutton'><span></span></a>
+	<div class='preloader'>
+		<img src='../images/world.svg' alt="Preloader" title="Preloader">
+	</div>
+
+
+	<header>
+		<div class="burger" title="Меню"> <span></span></div>
+		<img src="../images/logo.svg" alt="The Neuven" title="The Neuven">
+		<nav>
+			<ul>
+				<li><a href="../index.html" title="Гланая">главная</a></li>
+				<li><a href="../pages/tours.html" title="Туры">услуги</a></li>
+				<li><a href="../pages/blog.html" title="Блог">блог</a></li>
+				<li class="active"><a href="../pages/about.html" title="О нас">о нас</a></li>
+				<li><a href="../pages/contactUs.html" title="Контакты">контакты</a></li>
+			</ul>
+		</nav>
+		<div>
+			<a href="../pages/logIn.html" title="Вход/Регистрация"><svg class="icon" ><use  xlink:href="../images/sprite.svg#user" ></svg></a>
+		</div>
+	</header>
+
+	<main>
+				
+		<section id="top">
+			<div>
+				<h1>о нас</h1>
+				<ol>
+					<li><a href="../index.html" title="Главная">главная</a></li>
+					<li>о нас</li>
+				</ol>
+			</div>
+		</section>
+
+		<section id="radio">
+			<div class="picture">
+				<img src="../images/About/about1.jpg" alt="Наша команда" title="Наша команда">
+			</div>
+			<div class="container">
+				<div class="fade2">Почему мы?</div>
+				<input type="radio" name="folder" id="folder1" checked="" class="radio-folder">
+				<label for="folder1">опыт</label>
+				<div class="fade2">
+					The Neuven стремится предоставить нашим клиентам самые выгодные и качественные туристические услуги. Мы увлечены путешествиями и делимся с вами чудесами света.
+					<div>
+						<span>Туры</span>
+						<div class="wrap">
+							<div>
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<span>Экскурсии</span>
+						<div class="wrap">
+							<div>
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<span>Бронирование</span>
+						<div class="wrap">
+							<div>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="radio" name="folder" id="folder2" class="radio-folder">
+				<label for="folder2">навыки</label>
+				<div class="fade2">Мы с гордостью предлагаем отличное качество и соотношение цены и качества в наших турах, которые дают вам возможность познакомиться с выбранным вами местом в аутентичной и захватывающей манере.
+					<a href="../pages/contactUs.html#getInTouch" title="Связаться с нами">Связаться</a>
+				</div>
+				<input type="radio" name="folder" id="folder3" class="radio-folder">
+				<label for="folder3">наша цель</label>
+				<div  class="fade2">
+					<ul>
+						<li>Качество</li>
+						<li>Надежность</li>
+						<li>Эксклюзивность</li>
+						<li>Репутация</li>
+						<li>Отзывчивость</li>
+					</ul>
+					<a href="../pages/contactUs.html#getInTouch" title="Связаться с нами">Связаться</a>
+					<a href="../index.html#radio" title="Узнать больше">Узнать больше</a>
+				</div>
+
+			</div>
+		</section>
+		
+		<section id="feedback">
+				<h1>Что о нас говорят</h1>
+				<div class="container">
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<div class="slide fade">
+						<figure><img src="../images/About/feedback1.jpg" alt="Фото клиента" title="Фото клиента"></figure>
+						<blockquote> Огромное спасибо за помощь в выборе тура в Париж: подробнейшие консультации, точная информация, все очень четко, грамотно, организованно. Поездка была незабываемой и впечатляющей! Удачи и процветания!</blockquote>
+						<a href="../pages/contactUs.html#getInTouch" title="Связаться с нами">Елизавета Белова</a>
+						<span>Клиент</span>
+					</div>
+					<div class="slide fade">
+						<figure><img src="../images/About/feedback2.jpg" alt="Фото клиента" title="Фото клиента"></figure>
+						<blockquote>Хочу поблагодарить и оставить положительный отзыв о работе данной фирмы. Вежливое общение, оперативный подбор информации, широкий выбор и открытость в разрешении всяческих вопросов &mdash; всё это заслуживает отдельного упоминания и дополнительной похвалы</blockquote>
+						<a href="../pages/contactUs.html#getInTouch" title="Связаться с нами">Петр Васильев</a>
+						<span>Клиент</span>
+					</div>
+					<div class="slide fade">
+						<figure><img src="../images/About/feedback3.jpg" alt="Фото клиента" title="Фото клиента"></figure>
+						<blockquote>Всегда мечтала побывать в Голландии на цветении тюльпанов. Этой весной выдалась такая возможность на майские праздники. Честно скажу, что попала в рай, безумная красота, завораживающая природа, уют и просто умиротворение вокруг. Долго делала фото на телефон, потом перестала и просто любовалась. Невозможно описать словами это великолепие из цветов. Спасибо турфирме Труксан и обворожительной Ларисе за прекрасное предложение. Кроме парка тюльпанов, привлек своей неповторимостью и город Лейпциг. Гостиницы и питание тоже превзошли ожидания. Огромное человеческое спасибо</blockquote>
+						<a href="../pages/contactUs.html#getInTouch" title="Связаться с нами">Жанна Сидорова</a>
+						<span>Клиент</span>
+					</div>
+				</div>
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+				</div>
+		</section>
+		<script src="../scripts/slider.js" type="text/javascript"></script>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="contact">
+					<h6>свяжитесь с нами:</h6>
+					<span><a href="tel:+375291231223" title="Позвонить нам"><svg class="icon"><use xlink:href="../images/sprite.svg#phone-call"></use></svg>+375-(29)-123-12-23</a></span>
+					<span><a href="mailto:info@test.com" title="Написать нам"><svg class="icon"><use xlink:href="../images/sprite.svg#email"></use></svg>info@test.com</a></span>
+					<span><a href="contactUs.html#map" title="Как нас найти"><svg class="icon"><use xlink:href="../images/sprite.svg#map-locator"></use></svg>Cело Кукуево, улица Барабашкина 13</a></span>
+			</div>
+			<div class="pop">
+				<h6>популярные новости:</h6>
+				<a href="../pages/blogPage_1.html" title="Статья">Вершины, которые нужно успеть покорить</a>
+				<span>Январь 25, 2021</span>
+				<a href="../pages/blogPage_1.html" title="Статья">10 вещей, которые нужно сделать на Кубе</a>
+				<span>Май 4, 2021</span>
+			</div>
+			<nav>
+				<h6>Быстрые ссылки:</h6>
+				<ul>
+					<li><a href="../index.html" class="active" title="Главная">главная</a></li>
+					<li><a href="../pages/about.html" title="О нас">о нас</a></li>
+					<li><a href="../pages/tours.html" title=" Туры">услуги</a></li>
+					<li><a href="../pages/blog.html" title="Блог">блог</a></li>
+					<li><a href="../pages/contactUs.html" title="Контакты">контакты</a></li>
+				</ul>
+				<a href="" title="Связаться с нами">Связаться</a>
+			</nav>
+		</div>
+		<div class="bottom">
+			<span>&copy; 2021 The Neuven. All Rights Reserved. Created by Hlebreadm</span>
+			<div>
+				<a href="https://twitter.com/?lang=ru" title="Тwitter"><svg class="icon"><use xlink:href="../images/sprite.svg#twitter"></use></svg></a>
+				<a href="https://www.facebook.com/" title="Facebook"><svg class="icon"><use xlink:href="../images/sprite.svg#facebook"></use></svg></a>
+				<a href="https://www.instagram.com/" title="Instagram"><svg class="icon"><use xlink:href="../images/sprite.svg#instagram"></use></svg></a>
+			</div>
+			<a href="../pages/404.html" title="Политика конфиденциальности">Privacy policy</a>
+		</div>
+	</footer>
+</body>
+</html>

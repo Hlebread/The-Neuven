@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Контакты</title>
+	<link type="image/png" rel="shortcut icon" href="../images/favicon.png">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/style.css" type="text/css">
+	<link rel="stylesheet" href="../styles/contactUs.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="../scripts/script.js" type="text/javascript"></script>
+	<script>
+		$(window).on('scroll', function(){
+			if ($(window).scrollTop()>100){
+				$('header').addClass('dark');
+			}
+			else
+			{
+				$('header').removeClass('dark');
+			}
+		})</script>
+</head>
+<body>
+	<a id='upbutton'><span></span></a>
+	<div class='preloader'>
+		<img src='../images/world.svg' title="Preloader" alt="Preloader">
+	</div>
+
+
+	<header>
+		<div class="burger" title="Меню"> <span></span></div>
+		<img src="../images/logo.svg" alt="The Neuven" title="The Neuven">
+		<nav>
+			<ul>
+				<li><a href="../index.html" title="Гланая">главная</a></li>
+				<li><a href="../pages/tours.html" title="Туры">услуги</a></li>
+				<li><a href="../pages/blog.html" title="Блог">блог</a></li>
+				<li><a href="../pages/about.html" title="О нас">о нас</a></li>
+				<li class="active"><a href="../pages/contactUs.html" title="Контакты">контакты</a></li>
+			</ul>
+		</nav>
+		<div>
+			<a href="../pages/logIn.html" title="Вход/Регистрация"><svg class="icon" ><use  xlink:href="../images/sprite.svg#user" ></svg></a>
+		</div>
+	</header>
+
+	<main>
+		<section id="top">
+			<div>
+				<h1>контакты</h1>
+				<ol>
+					<li><a href="../pages/index.html" title="Главная">главная</a></li>
+					<li>контакты</li>
+				</ol>
+			</div>
+		</section>
+
+		<section id="contacts">
+			<article>
+				<svg class="icon"><use xlink:href="../images/sprite.svg#smartphone"></use></svg>
+				<span></span>
+				<a href="tel:+375296997748" title="Позвонить нам">+375-(29)-123-12-23</a>
+				<a href="tel:+375296997748" title="Позвонить нам">+375-(29)-981-44-78</a>
+			</article>
+			<article>
+				<svg class="icon"><use xlink:href="../images/sprite.svg#home"></use></svg>
+				<span></span>
+				<a href="https://www.google.com/maps/" target="_blank" title="Найти нас">Cело Кукуево, улица Барабашкина 13</a>
+			</article>
+			<article>
+				<svg class="icon"><use xlink:href="../images/sprite.svg#messenger"></use></svg>
+				<span></span>
+				<a href="mailto:mail@test.com" title="Написать нам">mail@test.com</a></span>
+				<a href="mailto:info@test.com" title="Написать нам">info@test.com</a></span>
+			</article>
+		</section>
+		
+		<section id="getInTouch">
+			<div>
+				<h3>Обратная связь</h3>
+				<p>Если у вас есть вопросы, просто заполните контактную форму, и мы ответим вам в ближайшее время.</p>
+			</div>
+			<form method="POST" action="https://fe.it-academy.by/TestForm.php">
+				<input required type="text" name="username" id="username" placeholder="Ваше имя">
+				<input required type="email" name="email" id="email" placeholder="E-mail">
+				<input required type="tel" name="telnumber" id="telnumber" placeholder="Телефон">
+				<textarea required name="message" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+				<input type="submit" value="Отправить">
+			</form>
+		</section>
+
+
+		<section id="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4701.447955569479!2d27.5543708!3d53.9011098!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1619868351639!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</section>
+	</main>
+	
+	<footer>
+		<div class="container">
+			<div class="contact">
+					<h6>свяжитесь с нами:</h6>
+					<span><a href="tel:+375291231223" title="Позвонить нам"><svg class="icon"><use xlink:href="../images/sprite.svg#phone-call"></use></svg>+375-(29)-123-12-23</a></span>
+					<span><a href="mailto:info@test.com" title="Написать нам"><svg class="icon"><use xlink:href="../images/sprite.svg#email"></use></svg>info@test.com</a></span>
+					<span><a href="contactUs.html#map" title="Как нас найти"><svg class="icon"><use xlink:href="../images/sprite.svg#map-locator"></use></svg>Cело Кукуево, улица Барабашкина 13</a></span>
+			</div>
+			<div class="pop">
+				<h6>популярные новости:</h6>
+				<a href="../pages/blogPage_1.html" title="Статья">Вершины, которые нужно успеть покорить</a>
+				<span>Январь 25, 2021</span>
+				<a href="../pages/blogPage_1.html" title="Статья">10 вещей, которые нужно сделать на Кубе</a>
+				<span>Май 4, 2021</span>
+			</div>
+			<nav>
+				<h6>Быстрые ссылки:</h6>
+				<ul>
+					<li><a href="../index.html" class="active" title="Главная">главная</a></li>
+					<li><a href="../pages/about.html" title="О нас">о нас</a></li>
+					<li><a href="../pages/tours.html" title=" Туры">услуги</a></li>
+					<li><a href="../pages/blog.html" title="Блог">блог</a></li>
+					<li><a href="../pages/contactUs.html" title="Контакты">контакты</a></li>
+				</ul>
+				<a href="" title="Связаться с нами">Связаться</a>
+			</nav>
+		</div>
+		<div class="bottom">
+			<span>&copy; 2021 The Neuven. All Rights Reserved. Created by Hlebreadm</span>
+			<div>
+				<a href="https://twitter.com/?lang=ru" title="Тwitter"><svg class="icon"><use xlink:href="../images/sprite.svg#twitter"></use></svg></a>
+				<a href="https://www.facebook.com/" title="Facebook"><svg class="icon"><use xlink:href="../images/sprite.svg#facebook"></use></svg></a>
+				<a href="https://www.instagram.com/" title="Instagram"><svg class="icon"><use xlink:href="../images/sprite.svg#instagram"></use></svg></a>
+			</div>
+			<a href="../pages/404.html" title="Политика конфиденциальности">Privacy policy</a>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,668 @@
+header nav ul li a 
+	{
+		color: #fff;
+	}
+header .burger span,
+header .burger::after,
+header .burger::before
+	{
+		background-color: #fff;
+	}
+header div svg
+	{
+		fill: #fff;
+	}
+/*------------------------------------------------------------------------Шапка-----------------------------------------------------------*/
+
+@keyframes wave
+	{
+		from{background-position: 50% 0%;}
+		50%{background-position: 50% 100%;}
+		100%{background-position: 50% 0%;}
+	}
+main #top
+	{
+		width: 100%; 
+		height: 400px;
+		background: url(../images/breadcrumbs-bg.jpg) no-repeat;
+		background-size: contain 120%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		box-sizing: border-box;
+		animation: wave 15s infinite;
+	}
+main #top div h1
+	{
+		font-size: 48px;
+		flex: 1 1 200px;
+		text-align: center;
+		text-transform: capitalize;
+		margin-bottom: 0;
+		padding: 0;
+		cursor: default;
+
+	}
+main #top div ol 
+	{
+		flex: 1 1 200px;
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		text-transform: uppercase;
+		margin-top: 0;
+		padding: 0;
+		text-align: center;
+	}
+main #top div ol li:last-of-type
+	{
+		color: rgba(255, 255, 255, 0.53);
+		cursor: default;
+	}
+main #top div ol li + li::before
+	{
+		content: '/';
+		margin: 0 20px;
+		color: #fff;
+	}
+main #top div ol li a
+	{
+		text-decoration: none;
+		color: #fff;
+		transition: .3s;
+	}
+main #top div ol li a:hover
+	{
+		color: #151515;
+	}
+	/*------------------------------------------------------------------------Why-----------------------------------------------------------*/
+
+main #radio
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 50px auto 36px;
+		width: 80%;
+	}
+main #radio .picture img
+	{
+		width:100%;
+		max-width: 650px;
+		transition: 1s;
+	}
+
+main #radio .container
+	{
+		width: 50%;
+		position: relative;
+		min-height: 400px;
+		margin-left: 50px;
+		transition: .5s;
+	}
+main #radio .container div:first-of-type
+	{
+		font: 64px sans-serif;
+		line-height: 1.2;
+		text-transform: capitalize;
+		margin: 40px 0 19px;
+		color: rgba(21, 21, 21, 0.09);
+	}
+main #radio .container .radio-folder
+	{
+		display: none;
+	}
+main #radio .container .radio-folder + label
+	{
+		position: relative;
+		min-width: 136px;
+		float: left;
+		letter-spacing: .1em;
+		font-weight: 400;
+		font-size: 18px;
+		text-transform: uppercase;
+		display: block;
+		margin-right: 5px;
+		padding: 0 20px 1px 20px;
+		line-height: 2em;
+		z-index: 1;
+		transition: color .3s;
+		border-bottom: 3px solid #e1e1e1;
+		width: 20%;
+
+	}
+main #radio .container .radio-folder + label:hover
+	{
+		color: #01b3a7;
+		cursor: pointer;
+	}
+main #radio .container .radio-folder:first-child + label
+	{
+		margin-left: 20px;
+		border-bottom: 3px solid #01b3a7;
+	}
+main #radio .container .radio-folder:checked + label
+	{
+		color: #01b3a7;
+		border-bottom: 3px solid #01b3a7;
+		z-index: 2;
+	}
+main #radio .container .radio-folder + label + div
+	{
+		display: none;
+	}
+main #radio .container .radio-folder:checked + label + div
+	{
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 12.95em;
+		/* min-width: 20em; */
+		padding: 10px;
+		animation-name: fade;
+		animation-duration: 1s;
+	}
+main #radio .container .radio-folder:checked + label + div:nth-of-type(3)
+	{
+		font-size: 20px;
+		max-width: 500px;
+		top: 9.95em;
+	}
+main #radio .container .radio-folder:checked + label + div:nth-of-type(3) a
+	{
+		top: 12em;
+		left: 0.5em;
+		text-align: center;
+	}
+@keyframes fade 
+	{
+		from {opacity: 0; transform: scale(.7);}
+		to {opacity: 1; transform: scale(1);}
+	}
+main #radio .container .radio-folder:checked + label + div div
+	{
+		margin: 20px 0;
+	}
+main #radio .container .radio-folder:checked + label + div div span
+	{
+		font-size: 18px;
+		color: #9b9b9b;
+	}
+main #radio .container .radio-folder:checked + label + div div .wrap
+	{
+		height: 6px;
+   	border-radius: 3px;
+   	background: #dddddd;
+	}
+main #radio .container .radio-folder:checked + label + div div .wrap div
+	{
+		height: 6px;
+		width: 79%;
+		background: #50ba87;
+		animation: progress1 1s;
+	}
+@keyframes progress1
+	{
+		from {width: 0;}
+		to {width: 79%;}
+	}
+@keyframes progress2
+	{
+		from {width: 0;}
+		to {width: 72%;}
+	}
+@keyframes progress3
+	{
+		from {width: 0;}
+		to {width: 86%;}
+	}
+main #radio .container .radio-folder:checked + label + div div:nth-of-type(2) .wrap div
+	{
+		width: 72%;
+		animation: progress2 1s;
+	}
+main #radio .container .radio-folder:checked + label + div div:nth-of-type(2) .wrap div,
+main #radio .container .radio-folder:checked + label + div div:nth-of-type(2) .wrap span
+	{
+		background: #e7a855;
+	}
+main #radio .container .radio-folder:checked + label + div div:nth-of-type(3) .wrap div
+	{
+		width: 86%;
+		animation: progress3 1s;	
+	}
+main #radio .container .radio-folder:checked + label + div:last-of-type
+	{
+		font-size: 20px;
+		top: 10.95em;
+	}
+main #radio .container .radio-folder:checked + label + div:last-of-type ul
+	{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: -10px auto;
+	}
+main #radio .container .radio-folder:checked + label + div:last-of-type ul li::marker
+	{
+		color: #01b3a7;
+		font-size: 1.3em;
+	}
+main #radio .container .radio-folder:checked + label + div:last-of-type ul li
+	{
+		flex: 1 1 50px;
+		margin: 0 20px;
+		text-align: left;
+	}
+
+main #radio .container .radio-folder:checked + label + div div:nth-of-type(3) .wrap div,
+main #radio .container .radio-folder:checked + label + div div:nth-of-type(3) .wrap span
+	{
+		background: #01b3a7;
+	}
+main #radio .container .radio-folder:checked + label + div div .wrap div span
+	{
+		display: inline-block;
+   	position: relative;
+   	top: -34px;
+   	left: 95%;
+   	width: 10px;
+   	height: 10px;
+   	background: #01b3a7;
+   	border: 7px solid #ffffff;
+   	border-radius: 50%;
+   	transform: translate(50%, -50%);
+   	box-shadow: 0 0 2px 3px rgb(0 0 0 / 10%);
+		animation: progressMark1 .6s;
+	}
+@keyframes progressMark1
+	{
+		from {left: 0;}
+		to {left: 95%;}
+	}
+main #radio .container a
+	{
+		position: absolute;
+		top:  16em;
+		left: 0;
+		max-height: 69px;
+		background-color: #01b3a7;
+		align-self: flex-start;
+		flex: 0 0 1px;
+		font-size: 16px;
+		padding: 20px 30px 18px;
+		margin: 30px 0;
+		transition: .3s ease-in;
+		color: #fff;
+		border: 2px solid #01b3a7;
+		text-decoration: none;
+		box-sizing: border-box;
+	}
+main #radio .container a:hover,
+main #radio .container a:active
+	{
+		background-color: white;
+		color: #151515;
+		border: 2px solid #151515;
+	}
+main #radio .container a:last-of-type
+	{
+		left: 160px;
+		background-color: white;
+		color: #151515;
+		border: 2px solid #151515;
+		min-width: 189px;
+	}
+main #radio .container a:last-of-type:hover,
+main #radio .container a:last-of-type:active
+	{
+		background-color: #01b3a7;
+		border-color: #01b3a7;
+		color: #fff;
+	}
+
+@media all and (max-width: 1493px) 
+	{
+		main #radio
+			{
+				justify-content: center;
+			}
+		main #radio .container
+			{
+				min-height: 550px;
+			}
+	}
+@media all and (max-width: 1400px) {
+		main #radio .container
+			{
+				width: 80%;
+				margin-left:0;
+				margin-top: -12px;
+			}
+	}
+@media all and (max-width: 1000px) {
+	main #radio
+		{
+			width: 100%;
+			align-items: center;
+		}
+	main #radio .picture img
+		{
+			display: block;
+			margin: auto;
+			width: 95%;
+		}
+	main #radio .container
+		{
+			width: 90%;
+		}
+	main #radio .container div:first-of-type
+		{
+			text-align: center;
+		}
+
+	main #radio .container .radio-folder + label
+		{
+			width: 70%;
+			float: none;
+			margin: 20px auto;
+			text-align: center;
+			border-width: 1px 0 1px 0 !important;
+			border-style: solid;
+			border-color: #e1e1e1;
+		}
+	main #radio .container .radio-folder:checked + label
+		{
+			border-color: #01b3a7;
+		}
+	
+	main #radio .container .radio-folder + label:first-of-type,
+	main #radio .container .radio-folder + label:last-of-type
+		{
+			margin: 20px auto;
+			width: 60%;
+		}
+	
+	main #radio .container .radio-folder:checked + label + div
+		{
+			position: static;
+			text-align: center;
+			width: 80%;
+			margin: 0 auto;
+		}
+	main #radio .container .radio-folder:checked + label + div:nth-of-type(3)
+		{
+			font-size: 14px;
+		}
+	main #radio .container .radio-folder:checked + label + div:last-of-type ul
+		{
+			width: 80%;
+			padding: 0;
+			margin-left: 0;
+		}
+	main #radio .container .radio-folder:checked + label + div:last-of-type ul li
+		{
+			font-size: 14px;
+		}
+	main #radio .container a
+		{
+			display: block;
+			width: 60%;
+			margin: 30px auto;
+			position: static;
+			top:  30px;
+			min-width: 189px;
+			text-align: center;
+		}
+	main #radio .container .radio-folder:checked + label + div:nth-of-type(3) a
+		{
+			position: static;
+			margin: 30px auto;
+		}
+	main #radio .container a:last-of-type
+		{
+			left: 0;
+		}
+	main #radio .container .radio-folder:checked + label + div div span
+		{
+			text-align: left !important;
+		}
+	main #radio .container .radio-folder:checked + label + div div .wrap div span
+		{
+			left: 47%;
+			animation: progressMark2;
+		}
+	main #radio .container .radio-folder:checked + label + div div:nth-child(1)
+		{
+			margin-top: -10px;
+		}
+}
+@keyframes progressMark2
+	{
+		from {left: 0;}
+		to {left: 47%;}
+	}
+
+
+	/*------------------------------------------------------------------------Feedback-----------------------------------------------------------*/
+
+
+main #feedback
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;	
+}
+main #feedback  h1
+{
+	font-size: 36px;
+	box-sizing: border-box;
+	width: 75%;
+	margin: 0 auto 20px;
+	padding: 30px;
+	text-align: center;
+}
+/*------------------------------------------------------------------------Slider-----------------------------------------------------------*/
+
+main #feedback .container
+	{
+		position: relative;
+		width: 80%;
+	}
+main #feedback .container .prev,
+main #feedback .container .next
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		/* width: 30px;
+		height: 30px; */
+		text-align: center;
+		margin-top: -22px;
+		padding: 16px;
+		color: #bbb;
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.6s ease;
+		z-index: 10000;
+		/* border-radius: 100%; */
+	}
+main #feedback .container .prev:hover,
+main #feedback .container .next:hover
+	{
+		/* background-color: rgba(0,0,0,0.8); */
+		background-color: #01b3a78d;
+		color: #fff;
+	}
+main #feedback .container .prev
+	{
+		border-radius: 0 3px 3px 0;
+	}
+main #feedback .container .next
+	{
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+main #feedback .dot 
+	{
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 30px 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+main #feedback .dot.active,
+main #feedback .dot:hover
+	{
+		background-color: #01b3a7;
+	}
+@keyframes fade 
+	{
+		from {opacity: 0; transform: scale(.7);}
+		to {opacity: 1; transform: scale(1);}
+	}
+main #feedback .container .fade 
+	{
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+main #feedback .container .slide
+	{
+		display: none;
+	}
+/*------------------------------------------------------------------------Feedback-----------------------------------------------------------*/
+
+main #feedback .container div
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	width: 100%;
+	min-height: 456px;
+	margin: 0 auto;
+	box-shadow: 2px 3px 5px #afafaf;
+	z-index: 5;
+}
+main #feedback .container div::before
+{
+	content: '';
+	width: 94%;
+	height: 12px;
+	background: #e8e8e8;
+	position: absolute;
+	top: -15px;
+	left: 3%;
+}
+main #feedback .container div::after
+{
+	content: '';
+	width: 96%;
+	height: 9px;
+	background: #f4f4f4;
+	position: absolute;
+	top: -9px;
+	left: 2%;
+}
+main #feedback .container div figure img
+{
+	flex: 0 0 100px;
+	width: 100px;
+	height: 100px;
+	margin-top: 30px;
+	background-color: black;
+	border-radius: 100%;		
+}
+main #feedback .container div blockquote
+{
+	width: 70%;	
+	position: relative;		
+	margin-bottom: 30px;
+}
+main #feedback .container div blockquote::before,
+main #feedback .container div blockquote::after
+{
+	color: #50ba87;
+	font-size: 25px;
+	transform: scale(3);	
+	position: absolute;
+	transition: .3s;
+}
+main #feedback .container div blockquote::before
+{
+	content: '“';
+	top: 15px;
+	left: -40px;
+}
+main #feedback .container div blockquote::after
+{
+	content: '”';
+	right: -30px;
+}
+main #feedback .container div a
+{
+	text-transform: capitalize;
+	text-decoration: none;			
+	color: #151515;
+	font-weight: 400;
+	letter-spacing: .075em;
+	font-size: 21px;
+	transition: .3s;
+}
+main #feedback .container div a:hover
+{
+	color: #50ba87;
+}
+main #feedback .container div span
+{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #01b3a7;	
+	margin-bottom: 35px; 		
+}
+@media all and (max-width: 1000px)
+	{
+		main #feedback
+			{
+				width: 100%;
+			}
+		main #feedback .container div blockquote
+			{
+				width: 60%;
+			}
+	}
+@media all and (max-width: 450px)
+	{
+		main #feedback .container div blockquote::before,
+		main #feedback .container div blockquote::after
+			{
+				transform: scale(2);	
+			}	
+	}
+@media all and (max-width: 320px)
+	{
+		main #feedback .container div blockquote::before,
+		main #feedback .container div blockquote::after
+			{
+				transform: scale(1);	
+			}
+		main #feedback .container div blockquote::before
+			{
+				top: -20px;
+				left: -10px;
+			}
+		main #feedback .container div blockquote::after
+			{
+				right: -10px;
+			}		
+	}

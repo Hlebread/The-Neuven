@@ -1,0 +1,889 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+main #parallax
+	{
+		position: relative;
+		width: 100%;
+		height: 1000px;
+		margin-bottom: 0 !important;
+		z-index: -10;
+		overflow: hidden;
+	}
+main #parallax::before
+	{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 250px;
+		z-index: 30;
+		background: linear-gradient(transparent, #f7f7f7);
+	}
+main #parallax h1
+	{
+		font-family: 'Josefin Sans', sans-serif !important;
+		font-size: 140px;
+		font-weight: normal;
+		font-style: normal;
+		line-height: 140px;
+		color: #01b3a7;
+		position: absolute;
+		top: 20%;
+		left: 25%;
+		z-index: 4;
+		text-transform: uppercase;
+		transition: font-size .3s;
+	}
+main #parallax .scroll
+	{
+		height: 1000px;
+	}
+main #parallax .land
+	{
+		margin-top: 200px;
+		width: 100%;
+		height: 1000px;
+		position: absolute;
+		z-index: 5;
+		background: url(../images/index/landPar.png) no-repeat;
+		background-size: cover;
+		transition: margin-top 1s;
+	}
+@media all and (max-width: 1300px) 
+	{
+		main #parallax h1
+			{
+				font-size: 7vw;
+				left: 27%;
+				top: 25%;
+			}
+		main #parallax .land
+			{
+				margin-top: 400px;
+				background-size: cover;
+			}
+	}
+@media all and (max-width: 680px) 
+	{
+		main #parallax h1
+			{
+				font-size: 8vw;
+			}
+	}
+
+
+
+/*----------------------------------------------------Блок рядом с паралаксом-------------------------------------------------------*/	
+main #tours
+	{
+		background: #f7f7f7;
+		margin: 0;
+		padding-bottom: 4em;
+		z-index: 2000;
+	}
+main #tours div
+	{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		
+	}
+main #tours div a	
+	{
+		text-decoration: none;
+		position: relative;
+		top: -40px;
+		padding: 0;
+		margin: 14px 40px;
+		height: 420px ;
+		flex: 0 1 300px;
+	}
+main #tours div figure
+	{
+		position: relative;
+		overflow: hidden;
+		height: 420px ;
+		transition: .5s;
+		margin: 0;
+	}
+main #tours div figure figcaption
+	{
+		position: relative;
+		top: -70px;
+		z-index: 5;
+		font-size: 24px;
+		font-weight: 700;
+		color: #ffffff;
+		letter-spacing: normal;
+		text-align: center;
+	}
+main #tours div figure img
+	{
+		transition: .5s;
+	}
+main #tours div figure:hover
+	{
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		transform: translateY(-5px);
+	}
+main #tours div figure:hover img
+	{
+		transform: scale(1.1);
+	}
+main #tours > a
+	{
+		display: block;
+		width: 200px;
+		margin: 0 auto;
+		font: 18px sans-serif;
+		text-transform: capitalize;
+		text-decoration: none;
+		color: #151515;
+		transition: .5s ease;
+	}
+main #tours > a span
+	{
+		display: inline-flex;
+		vertical-align: middle;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 0 3px 10px;
+		line-height: 24px;
+		width: 25px;
+		opacity: 1;
+		transition: all .5s ease;
+		border: black;
+	}
+main #tours > a:hover span
+	{
+		width: 50px;
+	}
+main #tours > a span::before
+	{
+		background-color: #151515;
+		height: 2px;
+		flex-grow: 1;
+	}
+main #tours > a span::after
+	{
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 3px 0 3px 6px;
+		border-color: transparent transparent transparent #151515;
+		margin-left: 0;
+	}
+main #tours > a span::after,
+main #tours > a span::before
+	{
+		display: inline-block;
+		vertical-align: middle;
+		content: '';
+		transition: inherit;
+	}
+
+
+/*----------------------------------------------------Блок "Радио"-------------------------------------------------------------*/
+
+main #radio
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 50px auto 36px;
+		width: 80%;
+	}
+main #radio .picture img
+	{
+		width:100%;
+		max-width: 650px;
+		transition: 1s;
+	}
+
+main #radio .container
+	{
+		position: relative;
+		min-height: 400px;
+		margin-left: 50px;
+		transition: .5s;
+	}
+main #radio .container div:first-of-type
+	{
+		font: 36px sans-serif;
+		line-height: 1.2;
+		text-transform: capitalize;
+		margin: 40px 0 19px;
+		transition: .3s;
+	}
+main #radio .container .radio-folder
+	{
+		display: none;
+	}
+main #radio .container .radio-folder + label
+	{
+		position: relative;
+		float: left;
+		letter-spacing: .1em;
+		font-weight: 400;
+		font-size: 18px;
+		text-transform: uppercase;
+		display: block;
+		margin-right: 5px;
+		padding: 0 20px 1px 20px;
+		line-height: 2em;
+		z-index: 1;
+		transition: color .3s;
+		border-bottom: 3px solid #e1e1e1;
+
+	}
+main #radio .container .radio-folder + label:hover
+	{
+		color: #01b3a7;
+		cursor: pointer;
+	}
+main #radio .container .radio-folder:first-child + label
+	{
+		margin-left: 20px;
+		border-bottom: 3px solid #01b3a7;
+	}
+main #radio .container .radio-folder:checked + label
+	{
+		color: #01b3a7;
+		border-bottom: 3px solid #01b3a7;
+		z-index: 2;
+	}
+main #radio .container .radio-folder + label + div
+	{
+		display: none;
+	}
+main #radio .container .radio-folder:checked + label + div
+	{
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 9.95em;
+		min-width: 20em;
+		max-width: 29em;
+		padding: 10px;
+		/* border-top: 3px solid #e1e1e1; */
+		animation-name: fade;
+		animation-duration: 1s;
+	}
+@keyframes fade 
+	{
+		from {opacity: 0; transform: scale(.7);}
+		to {opacity: 1; transform: scale(1);}
+	}
+main #radio .container a
+	{
+		position: absolute;
+		top:  16em;
+		left: 0;
+		max-height: 69px;
+		background-color: #01b3a7;
+		align-self: flex-start;
+		flex: 0 0 1px;
+		font-size: 16px;
+		padding: 20px 30px 18px;
+		margin: 30px 0;
+		transition: .3s ease-in;
+		color: #fff;
+		border: 2px solid #01b3a7;
+		text-decoration: none;
+		box-sizing: border-box;
+	}
+main #radio .container a:hover,
+main #radio .container a:active
+	{
+		background-color: white;
+		color: #151515;
+		border: 2px solid #151515;
+	}
+main #radio .container a:last-of-type
+	{
+		left: 160px;
+		background-color: white;
+		color: #151515;
+		border: 2px solid #151515;
+	}
+main #radio .container a:last-of-type:hover,
+main #radio .container a:last-of-type:active
+	{
+		background-color: #01b3a7;
+		border-color: #01b3a7;
+		color: #fff;
+	}
+
+@media all and (max-width: 1493px) {
+		main #radio
+			{
+				justify-content: center;
+			}
+	}
+@media all and (max-width: 1300px) {
+		main #radio .container
+			{
+				margin-left:0;
+				margin-top: -12px;
+			}
+	}
+@media all and (max-width: 692px) {
+	main #radio
+		{
+			width: 100%;
+			align-items: center;
+		}
+	main #radio .picture img
+		{
+			display: block;
+			margin: auto;
+			width: 95%;
+		}
+	main #radio .container
+		{
+			width: 90%;
+			min-height: 650px;
+		}
+	main #radio .container div:first-of-type
+		{
+			text-align: center;
+		}
+	main #radio .container .radio-folder + label
+		{
+			width: 70%;
+			float: none;
+			margin: 20px auto;
+			text-align: center;
+			border-width: 1px 0 1px 0 !important;
+			border-style: solid;
+			border-color: #e1e1e1;
+		}
+	main #radio .container .radio-folder:checked + label
+		{
+			border-color: #01b3a7;
+		}
+	
+	main #radio .container .radio-folder + label:first-of-type,
+	main #radio .container .radio-folder + label:last-of-type
+		{
+			margin: 20px auto;
+			width: 60%;
+		}
+	
+	main #radio .container .radio-folder:checked + label + div
+		{
+			position: static;
+			text-align: center;
+			margin: 0 auto ;
+		}
+	main #radio .container a
+		{
+			display: block;
+			width: 60%;
+			margin: 30px auto;
+			position: relative;
+			top:  30px;
+			min-width: 189px;
+			text-align: center;
+		}
+	main #radio .container a:last-of-type
+		{
+			left: 0;
+		}
+}
+
+/*----------------------------------------------------Блок "Наши услуги"-------------------------------------------------------*/	
+main #services 
+	{
+		margin: auto;
+		width: 70%;
+	}
+main #services *
+	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+main #services h1
+	{
+		text-align: center;
+		font: 36px sans-serif;
+		text-transform: capitalize;
+	}
+main #services .container
+	{
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 20px 0;
+	}
+main #services .container .card
+	{
+		position: relative;
+		height: calc(350px + 6vw);
+		background: #ffffff;
+		display: flex;
+		width: 30%;
+		margin: 30px 0;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	}
+main #services .container .card:hover
+	{
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+main #services .container .card .imgBx
+	{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		background: rgba(255, 255, 255, 0.1);
+		height: calc(100% - 20px);
+		width: calc(100% - 20px);
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+		transition: .5s ease-in-out;
+		backdrop-filter: blur(5px);
+	}
+main #services .container .card:hover .imgBx
+	{
+		height: 150px;
+		width: 150px;
+		left: -75px;
+		top: calc(50% - 75px);
+		border-radius: 50%;
+		border: 5px solid rgba(255, 255, 255, 1);
+	}
+	main #services .container .card .imgBx svg
+	{
+		max-width: 100px;
+		fill: #01b3a7;
+		transition: 0.5s ease-in-out;
+	}
+main #services .container .card:hover .imgBx svg
+	{
+		max-width: 75px;
+	}
+main #services .container .card:nth-of-type(1):hover .imgBx svg 
+	{
+		transform: rotate(90deg);
+	}
+main #services .container .card:nth-of-type(2):hover .imgBx svg 
+	{
+		fill: #cd7f32;
+	}
+	main #services .container .card:nth-of-type(3):hover .imgBx svg 
+	{
+		fill: gold;
+	}
+main #services .container .card:nth-of-type(4):hover .imgBx svg 
+	{
+		fill: rgb(94, 0, 134);
+	}
+main #services .container .card:nth-of-type(5):hover .imgBx svg 
+	{
+		fill: rgb(255, 81, 0);
+	}
+main #services .container .card:nth-of-type(6):hover .imgBx svg 
+	{
+		fill: darkgreen;
+	}
+main #services .container .card .content
+	{
+		filter: blur(20px);
+		position: absolute;
+		right: 0;
+		width: calc(100% - 70px);
+		height: 100%;
+		padding: 20px;
+		padding-top: 40px;
+		display: flex;
+		justify-content: center;
+		align-items:flex-start;
+		transition: .5s;
+	}
+main #services .container .card:hover .content
+	{
+		filter: none;
+	}
+main #services .container .card .content a 
+	{
+		text-decoration: none;
+		font: bold 50px sans-serif;
+		color: #01b3a7;
+		transition: .3s;
+	}
+main #services .container .card .content a:hover
+	{
+		color: rgb(22, 46, 68);
+	}
+main #services .container .card .content p
+	{
+		margin-top: 10px;
+		font: 25px sans-serif;
+		color: rgb(81, 100, 109);
+	}
+@media all and (max-width: 1600px)
+	{
+		main #services .container
+		{
+			position: relative;
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+		}
+		main #services .container .card
+		{
+			width: 100%;
+			height: calc(250px + 1vw);
+		}	
+		main #services .container .card .content
+		{
+			align-items: center;
+			padding-top: 0;
+			padding: 40px;
+			filter: none;
+		}
+		main #services .container .card .imgBx
+		{
+			height: 150px;
+			width: 150px;
+			left: -75px;
+			top: calc(50% - 75px);
+			border-radius: 50%;
+		}
+		main #services .container .card:hover .imgBx
+		{
+			transform: translateY(-10px);
+		}
+	}
+@media all and (max-width: 770px)
+	{
+		main #services .container .card
+		{
+			height: calc(250px + 45vw);
+		}
+		main #services .container .card .imgBx
+		{
+			width: 100px;
+			height: 100px;
+			left: calc(50% - 50px);
+			top: calc(0% + 5px);
+		}
+		main #services .container .card:hover .imgBx
+		{
+			height: 100px;
+			width: 100px;
+			left: calc(50% - 50px);
+			top: calc(0% - 40px);
+		}
+		main #services .container .card .imgBx svg
+		{
+			max-width: 60px;
+		}
+		main #services .container .card .content
+		{
+			width: 100%;
+			margin-top: 20px;
+		} 
+		main #services .container .card .content a 
+		{
+			font-size: 7vw;
+		}
+		main #services .container .card .content p
+		{
+			font-size: 5vw;
+		}
+			
+	}
+
+/*----------------------------------------------------Блок "Горячие туры"-------------------------------------------------------*/	
+
+main #hot article 
+	{
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+main #hot h1
+	{
+		width: 50%;
+		margin: 0 auto 1em;
+		text-align: center;
+		font: 36px sans-serif;
+		text-transform: capitalize;
+	}
+main #hot article
+	{
+		margin-bottom: 30px;
+	}
+main #hot article .container
+	{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0 auto;
+		border: 1px solid #e1e1e1;
+		position: relative;
+		overflow: hidden;
+	}
+main #hot article .container > div:nth-child(1)
+	{
+		margin-bottom: -7px;
+	}
+main #hot article .container div img
+	{
+		transition: .3s;
+	}
+/* main #hot article .container:hover div img
+	{
+		transform: scale(1.05);
+
+	} */
+
+main #hot article .container .content 
+	{
+		align-self: flex-start;
+		margin-left: 30px;
+	}
+main #hot article .container .content a
+	{
+		text-decoration: none;
+		color: #151515;
+		transition: 0.3s;
+	}
+main #hot article .container .content a:hover
+	{
+		color: #01b3a7;
+	}
+main #hot article .container .content a h2
+	{
+		/* margin-top: 3em; */
+		font-weight: bolder;
+   	letter-spacing: normal;
+   	font-size: 21px;
+	}
+main #hot article .container .content div:nth-child(2)
+	{
+		color: #9b9b9b;
+		font-size: 12px;
+		font-weight: 500;
+		letter-spacing: .1em;
+	}
+main #hot article .container .content div:nth-child(2) svg
+	{
+		width: 12px;
+		height: 12px;
+		vertical-align: middle;
+		fill: gold;
+	}
+main #hot article .container .content div:nth-child(2) svg:last-of-type
+	{
+		fill: none;
+		stroke:  #151515;
+		stroke-width: 7px;
+	}
+main #hot article .container .content div:nth-child(2) a
+	{
+		color: #9b9b9b;
+		font-size: 12px;
+   	font-weight: 500;
+   	letter-spacing: .1em;
+		transition: .5s;
+		margin-left: 10px;
+	}
+main #hot article .container .content div:nth-child(2) a:hover
+	{
+		color: #01b3a7;
+	}
+main #hot article .container .content div:nth-child(3)
+	{
+		width: 80%;
+		padding: 15px 0;
+		letter-spacing: .025em;
+   	color: #9b9b9b;
+		margin-bottom: 30px;
+	}
+main #hot article .container .content 
+	{
+		position: relative;
+	}
+main #hot article .container .content a:nth-child(4)
+	{
+		font-size: 16px;
+		margin: 30px 0;
+		transition: .3s ease-in;
+		color: #fff;
+		text-transform: uppercase;
+		box-sizing: border-box;
+		background-color: white;
+		color: #151515;
+		border: 2px solid #151515;
+		padding: 17px 30px 17px;
+	}
+main #hot article .container .content a:nth-child(4):hover
+	{
+		background-color: #01b3a7;
+		border-color: #fff;
+		color: #fff;
+	}
+main #hot article .container aside
+	{
+		position: absolute;
+		top: -1px;
+		right: -1px;
+		width: 100px;
+		height: 70px;
+		background: #01b3a7;
+		border-radius: 0 0 0 80% ;
+		text-align: center;
+		padding-top: 1em;
+		font-size: 21px;
+   	letter-spacing: .025em;
+   	color: #ffffff;
+	}
+@media all and (max-width: 1350px)
+	{
+		main #hot article 
+			{
+				width: 1000px;
+			}
+	}
+@media all and (max-width: 1150px)
+	{
+		main #hot article 
+			{
+				width: 95%;
+			}
+		main #hot article .container
+			{
+				flex-direction: column;
+				width: 95%;
+			}
+		main #hot article .container div 
+			{
+				overflow: hidden;
+				width: 100%;
+			}
+		main #hot article .container div img
+			{
+				width: 90vw;
+				margin-right: 0;
+			}
+
+		main #hot article .container .content
+			{
+				width: 100%;
+				padding-bottom: 70px;
+			}
+		main #hot article .container .content div:nth-child(3)
+
+			{
+				margin: 0;
+			}
+		main #hot article .container .content a:nth-child(4)
+			{
+				position: absolute;
+				bottom: -10px;
+				right: 50px;
+				padding: 8px 15px 8px;
+				font-size: 16px;
+			}
+	}
+/*----------------------------------------------------Блок "Команда"-------------------------------------------------------*/	
+
+main #team
+	{
+		width: 70%;
+		margin: 0 auto 50px;
+		padding: 20px;
+	}
+main #team h1
+	{
+		text-align: center;
+		text-transform: capitalize;
+		font:36px sans-serif;
+		font-weight:500;
+		margin-top: 0;
+	}
+main #team div.container
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+main #team div.container .card
+	{
+		flex: 0 1 250px;
+		background: #f7f7f7;
+		text-align: center;
+		/* border-radius: 20px; */
+		margin: 0 30px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+		min-height: 300px;
+		min-width: 220px;
+	}
+main #team div.container .card a,
+main #team div.container .card span
+	{
+		padding-top: 30px;
+		font: bold 18px sans-serif;
+		color: black;
+		display: block;
+		text-decoration: none;
+		transition: .5s;
+		overflow: hidden;
+	}
+main #team div.container .card a:first-of-type img
+	{
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		transition: 0.3s;
+		box-sizing: border-box;
+		border: 4px solid #f7f7f7;
+	}
+main #team div.container .card:hover a img
+	{
+		transform: translateY(-10px);
+		border: 4px solid #01b3a7;
+	}
+main #team div.container .card .details span
+	{
+		color: #01b3a7;
+		letter-spacing: .025em;
+		line-height: 1.7;
+		font: 500 14px sans-serif;
+		padding-top: 10px;
+	}
+main #team div.container .card .details a
+	{
+		font: normal 18px sans-serif;
+		padding-bottom: 30px;
+		padding-top: 15px;
+	}
+
+main #team div.container .card span:hover,
+main #team div.container .card .details a:hover
+	{
+		color: #01b3a7;
+	}
+
+@media all and (max-width: 75em) {
+	main #team div.container
+		{
+			width: 100%;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	main #team div.container .card
+		{
+			flex: 1 1 250px;
+			margin: 30px 30px;
+		}
+}

@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*
+	{
+		font-family: "Montserrat", sans-serif, Arial, sans-serif !important;
+	}
+*::selection
+	{
+		color: white;
+		background-color: black;
+	}
+body
+	{
+		margin: 0 auto;
+		padding: 0;
+   	font-size: 14px;
+   	line-height: 1.71429;
+   	font-weight: 400;
+   	letter-spacing: normal;
+   	color: #151515;
+		background: #fff;
+	}
+main
+	{
+		transition: 1s;
+		max-width: 2000px;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+main section
+	{
+		margin-bottom: 100px !important;
+	}
+/*----------------------------------------------------Preloader----------------------------------------------------------------*/	
+
+.preloader
+	{
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		background: #ffffff;
+		z-index: 10000;
+	}	
+.preloader img
+	{
+		position: relative;
+		top: 50%;
+		left: 50%;
+		width: 100px;
+		height: 100px;
+		margin-top: -50px;
+		margin-left: -50px;
+		text-align: center;
+		transform-origin: 45% 50%;
+		animation: preloader-rotate 2s infinite linear;	
+	}
+@keyframes preloader-rotate{
+		100% { transform: rotate(-360deg);}
+	}
+.loaded_hiding .preloader
+	{
+		transition: 0.3s opacity;
+		opacity: 0;
+	}
+.loaded .preloader{
+		display: none;
+	}
+/*----------------------------------------------------Кнопка ВВЕРХ---------------------------------------------------------------*/	
+
+#upbutton
+	{
+		background: #01b3a7;
+		width: 51px;
+		height: 51px;
+		text-align: center;
+		border-radius: 100%;
+		margin: 30px;
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+		opacity: 0.8;
+		transition: background-color .5s;
+		z-index: 10000;
+		display: none;
+	}
+#upbutton:hover
+	{
+		opacity: 1;
+		cursor: pointer;
+		background: #50ba87;
+	}
+#upbutton span::before,
+#upbutton span::after
+	{
+		display: block;
+		position: absolute;
+		width: 20px;
+		height: 5px;
+		background: #fff;
+	}
+#upbutton span::before
+	{
+		content: '';
+		top: 22px;
+		left: 10px;
+		transform: rotate(-45deg);
+	}
+#upbutton span::after
+	{
+		content: '';
+		top: 22px;
+		right: 10px;
+		transform: rotate(45deg);
+	}
+@media all and (max-width: 700px)
+	{
+		#upbutton
+			{
+				display: none !important;
+			}
+	}
+
+/*----------------------------------------------------Шапка----------------------------------------------------------------*/	
+
+header
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 59px;
+		padding: 0px 15px;
+		box-sizing: border-box;
+		z-index: 10000;
+		transition: .8s;
+	}
+header.dark
+	{
+		background: rgba(22, 46, 68, 0.98);
+	}
+header .burger
+	{
+		cursor: pointer;
+		display: none;
+		margin-bottom: 5px;
+	}
+header .burger:hover:after,
+header .burger:hover::before,
+header .burger:hover span
+	{
+		background-color: #01b3a7;
+	}
+header img
+	{
+		height: 30px;
+	}
+header nav
+	{
+		flex: auto;
+	}
+header nav ul
+	{
+		align-items: flex-end;
+		justify-content: center;
+		transition: 1s;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		height: 59px;
+	}
+header nav ul li
+	{
+		list-style: none;
+		padding: 13px 0 13px;
+		margin: 0 10px;
+		border-top: 3px solid rgba(1, 179, 167, 0);
+		background-origin:border-box ;
+		transition: all .5s ease-out;
+	}
+header nav ul li.active,
+header nav ul li:hover
+	{
+		color: #fff;
+		background-color: rgba(255, 255, 255, 0.11);
+		background-origin: border-box;
+		border-top: 3px solid #01b3a7;
+	} 
+header nav ul li:first-child:hover
+	{
+		border-top: 3px solid #50ba87;
+	}
+header nav ul li a 
+	{
+		width: 100%;
+		height: 100%;
+		padding: 17px 35px 14px;
+		margin: 0;
+		box-sizing: border-box;
+		font-size: 19px;
+		font-weight: 500;
+   	letter-spacing: .05em;
+		color: black;
+		text-decoration: none;
+		text-transform:capitalize;
+		line-height: 30px;
+	}
+header.dark nav ul li a	
+	{
+		color: #ffffff;
+	}
+header div svg
+	{
+		flex: 0 0 22px;
+		height: 22px;
+		width: 22px;
+		padding: 0 5px;
+		margin-bottom: 5px;
+		fill: rgb(0, 0, 0);
+		transition: .5s;
+	}
+header.dark div svg
+	{
+		fill: #fff;
+	}
+header div svg:hover
+	{
+		fill: #01b3a7;
+	}
+
+
+@media all and (max-width: 980px){
+	body.lock
+		{
+			overflow: hidden;
+			transition: 1s;
+		}
+	body.lock main,
+	body.lock footer
+		{
+			filter: blur(20px);
+		}
+	header img
+		{
+			display: none;
+		}
+	header .burger
+		{
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 20px;
+			z-index: 1;
+		}
+	header .burger::after,
+	header .burger::before
+		{
+			content: '';
+			background-color: rgb(0, 0, 0);
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			transition: all 0.3s ease 0s;
+		}
+	header .burger::before
+		{
+			top: 0;
+		}
+	header .burger::after
+		{
+			bottom: 0;
+		}
+	header .burger span
+		{
+			position: absolute;
+			background-color: rgb(0, 0, 0);
+			left: 0;
+			top: 9px;
+			width: 100%;
+			height: 2px;
+			transition: all 0.3s ease 0s;
+		}
+	header.dark .burger::after,
+	header.dark .burger::before,
+	header.dark .burger span
+		{
+			background-color: rgb(255, 255, 255);
+		}
+
+	header .burger.active::before
+		{
+			transform: rotate(45deg);
+			top: 9px;
+		}
+	header .burger.active::after
+		{
+			transform: rotate(-45deg);
+			bottom: 9px;
+		}
+	header .burger.active span
+		{
+			transform: scale(0);
+		}
+	header .burger.active:hover:after,
+	header .burger.active:hover::before,
+	header .burger.active:hover span
+		{
+			background-color: #50ba87;
+		}
+	header nav
+		{
+			position: fixed;
+			top: 0;
+			left: -150%;
+			width: 50%;
+			min-width: 176px;
+			height: 100%;
+			background-color: #01b3a7;
+			margin: 0 0 0 0;
+			padding: 180px 0 0 0;
+			transition: 1s;
+			border-radius: 0 0 100% 0;
+		}
+	header nav.active
+		{
+			left: 0;
+		}
+	header nav ul
+		{
+			flex-direction: column;
+			align-items: flex-start;	
+		}
+	header nav ul li
+		{
+			/* padding: 0; */
+			border-top: 3px solid rgba(1, 179, 167, 0);
+			border-bottom: 3px solid rgba(1, 179, 167, 0);
+			margin-left: 0;
+		}
+	header nav ul li.active
+		{
+			width: 30vw;
+			min-width: 135px;
+			border-top: 3px solid #50ba87;
+			border-bottom: 3px solid #50ba87;
+		}
+	header nav ul li:hover
+		{
+
+			border-bottom: 3px solid #50ba87;
+		} 
+	header nav ul li a
+		{
+			font-size: 3vw;
+			color: #ffffff;
+		}
+	}
+@media all and (max-width: 455px)
+	{
+		header nav ul li a
+			{
+				font-size: 1em;
+			}
+	}
+/*----------------------------------------------------Подвал----------------------------------------------------------------*/	
+	
+footer
+	{
+		background: rgb(22, 46, 68);
+	}
+footer .container
+	{
+		display: flex;
+		justify-content: center;
+		margin: auto;
+	}
+footer div .contact, 
+footer div .pop, 
+footer nav
+	{
+		display: flex;
+		flex-direction: column;
+		margin: 30px;
+		flex: 0 1 370px;
+	}
+footer h6, 
+footer h6, 
+footer h6
+	{
+		font: 500 16px sans-serif;
+		color:#ffffff;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+footer div .contact h6
+	{
+		margin-bottom: 15px;
+	}
+footer div a
+	{
+		font-size: 14px;
+		font-weight: 200;
+		line-height: 1.72;
+		color: #ffffff;
+		margin-left: 5px;
+		text-decoration: none;
+		transition: .5s;
+	}
+footer div .contact span 
+	{
+		margin: 20px 0 0;
+	}
+footer div .contact span a svg
+	{
+		height: 22px;
+		width: 22px;
+		padding-right: 10px;
+		fill: #01b3a7;
+		transition: .5s;
+		display: inline-block;
+	}
+footer div .contact span a:hover
+	{
+		color: #01b3a7;
+	}
+
+footer div .pop a
+	{
+		color: #01b3a7;
+		padding: 30px 0 0;
+		margin-left: 0;
+		text-transform: capitalize;
+	}
+footer div .pop span
+	{
+		margin: 7px 0;
+		color: rgba(255, 255, 255, 0.25);
+		text-transform: capitalize;
+	}
+footer div .pop a:hover,
+footer div .pop a:active,
+footer div .pop a:focus
+	{
+		color: #50ba87;
+	}
+
+footer div nav ul
+	{
+		margin: 30px 0 0;
+		display: flex;
+		flex-wrap: wrap;
+		color: #01b3a7;
+		padding-left: 22px;
+	}
+footer div nav ul li
+	{
+		flex: 1 1 90px;
+		justify-content: flex-start;
+		margin-right: 40px;
+		margin-top: 5px;
+		text-transform: capitalize;
+	}
+footer div nav ul li a:hover
+	{
+		color: #01b3a7;
+	}
+footer div nav > a
+	{
+		background-color: #01b3a7;
+		align-self: flex-start;
+		flex: 0 0 1px;
+		font-size: 16px;
+		padding: 20px 30px 18px;
+		margin: 30px 0;
+		transition: .3s ease-in;
+	}
+footer div nav > a:hover,
+footer div nav > a:focus,
+footer div nav > a:active
+	{
+		background-color: #50ba87;
+	}
+
+footer .bottom
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		background: #11263a;
+		min-height: 100px;
+	}
+footer .bottom span,
+footer .bottom a
+	{
+		color: #ffffff4d;
+		flex: 0 1 270px;
+		transition: .3s;
+	}
+footer .bottom a svg
+	{
+		width: 18px;
+		height: 18px;
+		fill: #ffffff4d;
+		margin: 10px;
+		transition: .3s;
+	}
+footer .bottom a:hover,
+footer .bottom a svg:hover
+	{
+		color: #01b3a7;
+		fill: #01b3a7;
+	}
+@media all and (max-width: 75em) {
+	footer .container
+		{
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	footer .container nav
+		{
+			flex: 1 0 1px;
+			flex-wrap: nowrap;
+			align-items: center;
+			padding: 0;
+
+		}
+	footer .container nav > a
+		{
+			align-self: center;
+		}
+	footer .container nav ul
+		{
+			flex: 1 1 1px;
+			width: 70%;
+			justify-content: center;
+		}
+	footer .container nav ul li
+		{
+			flex: 1 1 50px;
+		}
+	footer .bottom
+		{
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-self: center;
+		}
+	footer .bottom span,
+	footer .bottom div,
+	footer .bottom a
+		{
+			flex: 1 1 10px;
+			margin: 10px 0;
+		}
+	footer .bottom span
+		{
+			text-align: center;
+		}
+	
+}
+@media all and (max-width: 40em)
+{
+	footer .container h6
+		{
+			align-self: center;
+		}
+	footer .container nav
+		{
+			flex-wrap: wrap;
+			flex: 0 1 370px;
+		}
+	footer .container nav ul
+		{
+			width: auto;
+			flex-direction: column;
+			align-self: flex-start;
+		}
+	footer .container nav ul li
+		{
+			align-self: flex-start;
+			flex: 1 1 1px;
+			text-align: center;
+		}
+	footer .container nav > a
+		{
+			align-self: flex-start;
+		}
+	footer div .contact, 
+	footer div .pop, 
+	footer nav
+		{
+			margin: 0 30px;
+		}
+	footer div .pop
+   	{
+     		margin-left: 40px;
+   	}
+	}
+@media all and (min-width: 2000px) 
+	{
+		footer .bottom
+			{
+				justify-content: center;
+			}
+	}

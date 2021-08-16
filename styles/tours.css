@@ -1,0 +1,448 @@
+header nav ul li a 
+	{
+		color: #fff;
+	}
+header .burger span,
+header .burger::after,
+header .burger::before
+	{
+		background-color: #fff;
+	}
+header div svg
+	{
+		fill: #fff;
+	}
+/*------------------------------------------------------------------------Шапка-----------------------------------------------------------*/
+
+@keyframes wave
+	{
+		from{background-position: 50% 0%;}
+		50%{background-position: 50% 100%;}
+		100%{background-position: 50% 0%;}
+	}
+body #top
+	{
+		width: 100%; 
+		height: 400px;
+		background: url(../images/breadcrumbs-bg.jpg) no-repeat;
+		background-size: contain 120%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		box-sizing: border-box;
+		animation: wave 15s infinite linear;
+	}
+body #top div h1
+	{
+		font-size: 48px;
+		flex: 1 1 200px;
+		text-align: center;
+		text-transform: capitalize;
+		margin-bottom: 0;
+		padding: 0;
+		cursor: default;
+
+	}
+body #top div ol 
+	{
+		flex: 1 1 200px;
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		text-transform: uppercase;
+		margin-top: 0;
+		padding: 0;
+		text-align: center;
+	}
+body #top div ol li:last-of-type
+	{
+		color: rgba(255, 255, 255, 0.53);
+		cursor: default;
+	}
+body #top div ol li + li::before
+	{
+		content: '/';
+		margin: 0 20px;
+		color: #fff;
+	}
+body #top div ol li a
+	{
+		text-decoration: none;
+		color: #fff;
+		transition: .3s;
+	}
+body #top div ol li a:hover
+	{
+		color: #151515;
+	}
+
+/*------------------------------------------------------------------------Main-----------------------------------------------------------*/
+
+main
+	{
+		display: flex;
+		flex-wrap: wrap;
+	}
+main #hot
+	{
+		flex: 100 1 300px;
+		margin-top: 71px;
+	}
+main #hot article 
+	{
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		transition: .5s;
+		box-shadow: 4px 4px 5px rgba(0, 0, 0, 0);
+	}
+main #hot article:hover
+	{
+		box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+	}
+main #hot h1
+	{
+		width: 50%;
+		margin: 0 auto 1em;
+		text-align: center;
+		font: 36px sans-serif;
+		text-transform: capitalize;
+	}
+main #hot article
+	{
+		margin-bottom: 30px;
+	}
+main #hot article .container
+	{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0 auto;
+		border: 1px solid #e1e1e1;
+		position: relative;
+		overflow: hidden;
+	}
+main #hot article .container > div:nth-child(1)
+	{
+		margin-bottom: -7px;
+	}
+main #hot article .container div img
+	{
+		transition: .3s;
+		max-width: 600px;
+    	max-height: 366px;
+	}
+main #hot article .container .content 
+	{
+		align-self: flex-start;
+		margin-left: 30px;
+	}
+main #hot article .container .content a
+	{
+		text-decoration: none;
+		color: #151515;
+		transition: 0.3s;
+	}
+main #hot article .container .content a:hover
+	{
+		color: #01b3a7;
+	}
+main #hot article .container .content a h2
+	{
+		/* margin-top: 3em; */
+		font-weight: bolder;
+   	letter-spacing: normal;
+   	font-size: 21px;
+	}
+main #hot article .container .content div:nth-child(2)
+	{
+		color: #9b9b9b;
+		font-size: 12px;
+		font-weight: 500;
+		letter-spacing: .1em;
+	}
+main #hot article .container .content div:nth-child(2) svg
+	{
+		width: 12px;
+		height: 12px;
+		vertical-align: middle;
+		fill: gold;
+	}
+main #hot article .container .content div:nth-child(2) svg:last-of-type
+	{
+		fill: none;
+		stroke:  #151515;
+		stroke-width: 7px;
+	}
+main #hot article .container .content div:nth-child(2) a
+	{
+		color: #9b9b9b;
+		font-size: 12px;
+   	font-weight: 500;
+   	letter-spacing: .1em;
+		transition: .5s;
+		margin-left: 10px;
+	}
+main #hot article .container .content div:nth-child(2) a:hover
+	{
+		color: #01b3a7;
+	}
+main #hot article .container .content div:nth-child(3)
+	{
+		width: 80%;
+		padding: 15px 0;
+		letter-spacing: .025em;
+   	color: #9b9b9b;
+		margin-bottom: 30px;
+	}
+main #hot article:nth-of-type(3) .container .content div:nth-child(3) 
+	{
+		margin-bottom: 15px;
+	}
+
+main #hot article .container .content 
+	{
+		position: relative;
+	}
+main #hot article .container > a
+	{
+		font-size: 16px;
+		margin: 30px 0;
+		transition: .3s ease-in;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		box-sizing: border-box;
+		background-color: white;
+		color: #151515;
+		border: 2px solid #151515;
+		padding: 17px 30px 17px;
+		position: absolute;
+		bottom: -10px;
+		right: 20px;
+	}
+main #hot article .container > a:hover
+	{
+		background-color: #01b3a7;
+		border-color: #fff;
+		color: #fff;
+	}
+main #hot article .container aside
+	{
+		position: absolute;
+		top: -1px;
+		right: -50px;
+		width: 100px;
+		height: 70px;
+		background: #01b3a7;
+		border-radius: 0 0 0 80% ;
+		text-align: center;
+		padding-top: 1em;
+		font-size: 21px;
+   	letter-spacing: .025em;
+   	color: #ffffff;
+	}
+@media all and (max-width: 1220px)
+	{
+		main
+			{
+				flex-direction: column;
+			}
+		main #hot
+			{
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		main #hot article 
+			{
+				width: 95%;
+			}
+		main #hot article .container
+			{
+				flex-direction: column;
+				width: 100%;
+			}
+		main #hot article .container div 
+			{
+				overflow: hidden;
+				width: 100%;
+			}
+		main #hot article .container div img
+			{
+				width: 100%;
+				max-height: none;
+				max-width: none;
+				margin-right: 0;
+			}
+
+		main #hot article .container .content
+			{
+				width: 100%;
+				padding-bottom: 70px;
+			}
+		main #hot article .container .content div:nth-child(3)
+
+			{
+				margin: 0;
+			}
+		main #hot article .container > a
+			{
+				padding: 8px 15px 8px;
+				font-size: 16px;
+			}
+	}
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+main aside
+	{
+		flex: 1 1 300px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-content: space-around;
+		align-items: center;
+		/* margin-top: 20px; */
+		margin-right: 50px;
+		padding: 50px 0;
+	}
+main aside h2
+	{
+		padding: 0;
+		padding-top: 10px;
+		margin: 20px;
+		margin-bottom: 5px;
+	}
+
+main aside article
+	{
+		flex: 0 0 300px;
+		box-sizing: border-box;
+		/* border: 1px solid grey; */
+		height: 400px;
+		margin: 30px 10px; 
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		overflow: hidden;
+		font: 13px sans-serif;
+		transition: .5s;
+		background-size: 100% 100%;
+	}
+main aside article figure
+	{
+		width: 100%;
+		height: 50%;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+main aside article:nth-child(1) figure
+	{
+		background-image: url(../images/Blog/blog1.jpeg);
+	}
+main aside article:nth-child(2) figure
+	{
+		background-image: url(../images/Blog/blog6.jpeg);
+	}
+main aside article:nth-child(3) figure
+	{
+		background-image: url(../images/Blog/blog3.jpeg);
+	}
+main aside article:nth-child(4) figure
+	{
+		background-image: url(../images/Blog/blog8.jpeg);
+	}
+main aside article:hover
+	{
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		transform: translateY(-5px);
+	} 
+main aside article a
+	{
+		text-decoration: none;
+		color: #151515;
+	}
+main aside article div
+	{
+		position: relative;
+		top: 0%;
+		box-sizing: border-box;
+		height: 50%;
+		background: #fff;
+		margin: 0;
+		padding: 20px;
+		border: 1px solid white;
+		position: relative;
+	}
+main aside article div span
+	{
+		color: #01b3a7;
+		text-transform: uppercase;
+	}
+main aside article div h6
+	{
+		width: 80%;
+		margin: 20px auto;
+		font: bold 17px sans-serif;
+	}
+@media all and (max-width: 1549.5px)
+	{
+		main > aside
+			{
+				flex-direction: row;
+				justify-content: space-around;
+				border-top: 1px solid #e1e1e1;
+			}
+		main aside h2
+			{
+				display: none;
+			}
+	}
+@media all and (max-width: 1100px)
+	{
+		main aside article figure
+			{
+				height: 50%;
+			}
+		main > aside
+			{	
+				justify-content: space-around;
+				margin-right: 0;
+			}
+	}
+@media all and (max-width: 1009px)
+	{
+		main aside
+			{
+				display: none;
+			}
+	}
+@media all and (max-width: 750px)
+	{
+		main aside article
+			{
+				flex: 0 1 500px;
+				height: 110vw;
+				font: bold 4vw sans-serif;
+			}
+		main aside article div h6
+			{	
+				font: bold 5vw sans-serif;
+			}
+		main aside .wrapper select
+			{
+				flex: 1 1 225px;
+				padding: 10px 0 10px 5px;
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		main aside form 
+			{	
+				flex: 1 1 225px;
+				margin-left: 0;
+				margin-bottom: 20px;
+				display: flex;
+			 }
+	}
